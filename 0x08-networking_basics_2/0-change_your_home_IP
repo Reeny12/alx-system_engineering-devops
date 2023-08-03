@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [[ $EUID -ne 0 ]]; then
+  echo "This script needs to be run with root privileges to configure the server."
+  exit 1
+fi
+
+echo "127.0.0.2 localhost" >> /etc/hosts
+
+echo "nameserver 8.8.8.8" > /etc/resolv.conf
+echo "facebook.com" >> /etc/resolv.conf
