@@ -1,17 +1,10 @@
 #!/bin/bash
 
 if [ $# -ne 1 ]; then
-  echo "Usage: $0 <IP_ADDRESS>"
+  echo "Usage: $0 {IP_ADDRESS}"
   exit 1
 fi
 
 ip_address="$1"
 
 ping -c 5 "$ip_address"
-
-if [ $? -eq 0 ]; then
-  echo "Ping to $ip_address was successful."
-else
-  echo "Ping to $ip_address failed."
-fi
-
