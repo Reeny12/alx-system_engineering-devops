@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ip_addresses=$(ip -4 addr | grep 'inet ' | awk '{print $2}')
 
