@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Script that configures an Ubuntu server with the below requirements.
 
 # localhost resolves to 127.0.0.2
